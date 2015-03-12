@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		89B6F97B1AB135DD00618B00 /* ProceduralKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 89B6F97A1AB135DD00618B00 /* ProceduralKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89B6F9811AB135DD00618B00 /* ProceduralKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B6F9751AB135DD00618B00 /* ProceduralKit.framework */; };
+		89B6F9881AB135DD00618B00 /* ProceduralKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B6F9871AB135DD00618B00 /* ProceduralKitTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		89B6F9821AB135DD00618B00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89B6F96C1AB135DD00618B00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89B6F9741AB135DD00618B00;
+			remoteInfo = ProceduralKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		89B6F9751AB135DD00618B00 /* ProceduralKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProceduralKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89B6F9791AB135DD00618B00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89B6F97A1AB135DD00618B00 /* ProceduralKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProceduralKit.h; sourceTree = "<group>"; };
+		89B6F9801AB135DD00618B00 /* ProceduralKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProceduralKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		89B6F9861AB135DD00618B00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89B6F9871AB135DD00618B00 /* ProceduralKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProceduralKitTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		89B6F9711AB135DD00618B00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89B6F97D1AB135DD00618B00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89B6F9811AB135DD00618B00 /* ProceduralKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		89B6F96B1AB135DD00618B00 = {
+			isa = PBXGroup;
+			children = (
+				89B6F9771AB135DD00618B00 /* ProceduralKit */,
+				89B6F9841AB135DD00618B00 /* ProceduralKitTests */,
+				89B6F9761AB135DD00618B00 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		89B6F9761AB135DD00618B00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				89B6F9751AB135DD00618B00 /* ProceduralKit.framework */,
+				89B6F9801AB135DD00618B00 /* ProceduralKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		89B6F9771AB135DD00618B00 /* ProceduralKit */ = {
+			isa = PBXGroup;
+			children = (
+				89B6F97A1AB135DD00618B00 /* ProceduralKit.h */,
+				89B6F9781AB135DD00618B00 /* Supporting Files */,
+			);
+			path = ProceduralKit;
+			sourceTree = "<group>";
+		};
+		89B6F9781AB135DD00618B00 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				89B6F9791AB135DD00618B00 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		89B6F9841AB135DD00618B00 /* ProceduralKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				89B6F9871AB135DD00618B00 /* ProceduralKitTests.swift */,
+				89B6F9851AB135DD00618B00 /* Supporting Files */,
+			);
+			path = ProceduralKitTests;
+			sourceTree = "<group>";
+		};
+		89B6F9851AB135DD00618B00 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				89B6F9861AB135DD00618B00 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		89B6F9721AB135DD00618B00 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89B6F97B1AB135DD00618B00 /* ProceduralKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		89B6F9741AB135DD00618B00 /* ProceduralKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89B6F98B1AB135DD00618B00 /* Build configuration list for PBXNativeTarget "ProceduralKit" */;
+			buildPhases = (
+				89B6F9701AB135DD00618B00 /* Sources */,
+				89B6F9711AB135DD00618B00 /* Frameworks */,
+				89B6F9721AB135DD00618B00 /* Headers */,
+				89B6F9731AB135DD00618B00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProceduralKit;
+			productName = ProceduralKit;
+			productReference = 89B6F9751AB135DD00618B00 /* ProceduralKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		89B6F97F1AB135DD00618B00 /* ProceduralKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89B6F98E1AB135DD00618B00 /* Build configuration list for PBXNativeTarget "ProceduralKitTests" */;
+			buildPhases = (
+				89B6F97C1AB135DD00618B00 /* Sources */,
+				89B6F97D1AB135DD00618B00 /* Frameworks */,
+				89B6F97E1AB135DD00618B00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89B6F9831AB135DD00618B00 /* PBXTargetDependency */,
+			);
+			name = ProceduralKitTests;
+			productName = ProceduralKitTests;
+			productReference = 89B6F9801AB135DD00618B00 /* ProceduralKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		89B6F96C1AB135DD00618B00 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Rachel Brindle";
+				TargetAttributes = {
+					89B6F9741AB135DD00618B00 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					89B6F97F1AB135DD00618B00 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+				};
+			};
+			buildConfigurationList = 89B6F96F1AB135DD00618B00 /* Build configuration list for PBXProject "ProceduralKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 89B6F96B1AB135DD00618B00;
+			productRefGroup = 89B6F9761AB135DD00618B00 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				89B6F9741AB135DD00618B00 /* ProceduralKit */,
+				89B6F97F1AB135DD00618B00 /* ProceduralKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		89B6F9731AB135DD00618B00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89B6F97E1AB135DD00618B00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		89B6F9701AB135DD00618B00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89B6F97C1AB135DD00618B00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89B6F9881AB135DD00618B00 /* ProceduralKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		89B6F9831AB135DD00618B00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89B6F9741AB135DD00618B00 /* ProceduralKit */;
+			targetProxy = 89B6F9821AB135DD00618B00 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		89B6F9891AB135DD00618B00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		89B6F98A1AB135DD00618B00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		89B6F98C1AB135DD00618B00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = ProceduralKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		89B6F98D1AB135DD00618B00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = ProceduralKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		89B6F98F1AB135DD00618B00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ProceduralKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		89B6F9901AB135DD00618B00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ProceduralKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		89B6F96F1AB135DD00618B00 /* Build configuration list for PBXProject "ProceduralKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89B6F9891AB135DD00618B00 /* Debug */,
+				89B6F98A1AB135DD00618B00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89B6F98B1AB135DD00618B00 /* Build configuration list for PBXNativeTarget "ProceduralKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89B6F98C1AB135DD00618B00 /* Debug */,
+				89B6F98D1AB135DD00618B00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		89B6F98E1AB135DD00618B00 /* Build configuration list for PBXNativeTarget "ProceduralKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89B6F98F1AB135DD00618B00 /* Debug */,
+				89B6F9901AB135DD00618B00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 89B6F96C1AB135DD00618B00 /* Project object */;
+}
