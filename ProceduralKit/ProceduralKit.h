@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Rachel Brindle. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for ProceduralKit.
 FOUNDATION_EXPORT double ProceduralKitVersionNumber;
