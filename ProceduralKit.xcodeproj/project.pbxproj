@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		89B6F97B1AB135DD00618B00 /* ProceduralKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 89B6F97A1AB135DD00618B00 /* ProceduralKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		89B6F9811AB135DD00618B00 /* ProceduralKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B6F9751AB135DD00618B00 /* ProceduralKit.framework */; };
-		89B6F9881AB135DD00618B00 /* ProceduralKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B6F9871AB135DD00618B00 /* ProceduralKitTests.swift */; };
 		89B6F9921AB1360D00618B00 /* FractalBrownianMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B6F9911AB1360D00618B00 /* FractalBrownianMotion.swift */; };
 		89B6F9941AB1362C00618B00 /* PerlinNoise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B6F9931AB1362C00618B00 /* PerlinNoise.swift */; };
 		89B6F9961AB13E7300618B00 /* FBMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B6F9951AB13E7300618B00 /* FBMTests.swift */; };
@@ -34,7 +33,6 @@
 		89B6F97A1AB135DD00618B00 /* ProceduralKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProceduralKit.h; sourceTree = "<group>"; };
 		89B6F9801AB135DD00618B00 /* ProceduralKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProceduralKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B6F9861AB135DD00618B00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		89B6F9871AB135DD00618B00 /* ProceduralKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProceduralKitTests.swift; sourceTree = "<group>"; };
 		89B6F9911AB1360D00618B00 /* FractalBrownianMotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FractalBrownianMotion.swift; sourceTree = "<group>"; };
 		89B6F9931AB1362C00618B00 /* PerlinNoise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerlinNoise.swift; sourceTree = "<group>"; };
 		89B6F9951AB13E7300618B00 /* FBMTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBMTests.swift; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 		89B6F9841AB135DD00618B00 /* ProceduralKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				89B6F9871AB135DD00618B00 /* ProceduralKitTests.swift */,
 				89B6F9951AB13E7300618B00 /* FBMTests.swift */,
 				89B6F9971AB13E9800618B00 /* PerlinNoiseTests.swift */,
 				89B6F9851AB135DD00618B00 /* Supporting Files */,
@@ -232,7 +229,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89B6F9881AB135DD00618B00 /* ProceduralKitTests.swift in Sources */,
 				89B6F9991AB13EA100618B00 /* FractalBrownianMotion.swift in Sources */,
 				89B6F99A1AB13EA100618B00 /* PerlinNoise.swift in Sources */,
 				89B6F9961AB13E7300618B00 /* FBMTests.swift in Sources */,
@@ -423,6 +419,7 @@
 				89B6F98D1AB135DD00618B00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89B6F98E1AB135DD00618B00 /* Build configuration list for PBXNativeTarget "ProceduralKitTests" */ = {
 			isa = XCConfigurationList;
@@ -431,6 +428,7 @@
 				89B6F9901AB135DD00618B00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -25,6 +25,17 @@ class PerlinNoiseTests: XCTestCase {
         subject = PerlinNoise(grid: grid)
     }
 
+    func testGenerateGrid() {
+        let grid = PerlinNoise.generateGrid(80, width: 100)
+        XCTAssertEqual(grid.count, 80, "Grid length")
+        for g in grid {
+            XCTAssertEqual(g.count, 100, "Grid width")
+            for pair in g {
+                XCTAssertEqualWithAccuracy(hypot(pair.x, pair.y), 1.0, 1e-6, "Must be vectors along unit circle")
+            }
+        }
+    }
+
     func testLinearInterpolation() {
         XCTAssertEqual(subject.linearInterpolation(1, 2, weight: 0.5), 1.5, "Linear Interpolation between two values")
         XCTAssertEqualWithAccuracy(subject.linearInterpolation(1, 2, weight: 0.2), 1.2, 1e-6, "Linear Interpolation between two values")
@@ -32,6 +43,10 @@ class PerlinNoiseTests: XCTestCase {
 
     func testDotProductGradient() {
         XCTAssertEqualWithAccuracy(subject.dotProductGradient(1, iy: 1, x: 1.2, y: 1.2), 0.2, 1e-6, "")
+    }
+
+    func testAt() {
+        XCTAssertEqualWithAccuracy(subject.at(2,1), 0, 1e-6, "")
     }
 
     func testPerformance() {
