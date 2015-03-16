@@ -19,6 +19,8 @@ public class FractalBrownianMotion {
 
     public var noise : (CGFloat, CGFloat) -> CGFloat = {(_, _) in 1}
 
+    public init() {}
+
     public func at(x: CGFloat, _ y: CGFloat) -> CGFloat {
         var total : CGFloat = 0.0
         var frequency : CGFloat = 1.0 / length
