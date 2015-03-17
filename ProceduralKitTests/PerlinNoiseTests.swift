@@ -25,11 +25,23 @@ class PerlinNoiseTests: XCTestCase {
         subject = PerlinNoise(grid: grid)
     }
 
+    func testMaxWidth() {
+        let grid = PerlinNoise.generateGrid(10, width: 20)
+        subject = PerlinNoise(grid: grid)
+        XCTAssertEqualWithAccuracy(subject.maxWidth, 20.0, 1e-12, "maxWidth")
+    }
+
+    func testMaxHeight() {
+        let grid = PerlinNoise.generateGrid(10, width: 20)
+        subject = PerlinNoise(grid: grid)
+        XCTAssertEqualWithAccuracy(subject.maxHeight, 10.0, 1e-12, "maxHeight")
+    }
+
     func testGenerateGrid() {
         let grid = PerlinNoise.generateGrid(80, width: 100)
-        XCTAssertEqual(grid.count, 80, "Grid length")
+        XCTAssertEqual(grid.count, 81, "Grid length")
         for g in grid {
-            XCTAssertEqual(g.count, 100, "Grid width")
+            XCTAssertEqual(g.count, 101, "Grid width")
             for pair in g {
                 XCTAssertEqualWithAccuracy(hypot(pair.x, pair.y), 1.0, 1e-6, "Must be vectors along unit circle")
             }
@@ -47,6 +59,8 @@ class PerlinNoiseTests: XCTestCase {
 
     func testAt() {
         XCTAssertEqualWithAccuracy(subject.at(2,1), 0, 1e-6, "")
+        XCTAssertEqualWithAccuracy(subject.at(-1,-2), 6.0, 1e-6, "Below the bounds")
+        XCTAssertEqualWithAccuracy(subject.at(4,2), 2, 1e-6, "Beyond the bounds")
     }
 
     func testPerformance() {

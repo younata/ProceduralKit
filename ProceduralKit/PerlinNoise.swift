@@ -11,11 +11,19 @@ import Foundation
 public class PerlinNoise {
     let grid : [[(x: CGFloat, y: CGFloat)]]
 
+    public var maxWidth : CGFloat {
+        return CGFloat(grid[0].count - 1)
+    }
+
+    public var maxHeight : CGFloat {
+        return CGFloat(grid.count - 1)
+    }
+
     public class func generateGrid(length: Int, width: Int) -> [[(x: CGFloat, y: CGFloat)]] {
         var ret : [[(x: CGFloat, y: CGFloat)]] = []
-        for x in 0..<length {
+        for x in 0..<(length+1) {
             var g : [(x: CGFloat, y: CGFloat)] = []
-            for y in 0..<width {
+            for y in 0..<(width+1) {
                 let a = CGFloat(arc4random_uniform(500000)) / 500000.0
                 let b = sqrt(1 - a*a)
                 g.append((x: a, y: b))
@@ -67,14 +75,15 @@ public class PerlinNoise {
         if x < 0.0 {
             x = 0
         }
-        if grid.count >= Int(x+1) {
-            x = CGFloat(grid.count - 2)
+        if maxHeight <= x {
+            x = maxHeight - 1
         }
 
         return (Int(x), Int(x+1))
     }
 
     private func nearestValidYIntegers(x: Int, var y: CGFloat) -> (Int, Int) {
+
         let g = grid[x]
 
         if g.count < 2 {
@@ -83,8 +92,8 @@ public class PerlinNoise {
         if y < 0.0 {
             y = 0
         }
-        if g.count >= Int(y+1) {
-            y = CGFloat(g.count - 2)
+        if maxWidth <= y {
+            y = maxWidth - 1
         }
 
         return (Int(y), Int(y+1))

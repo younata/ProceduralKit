@@ -55,6 +55,7 @@ class FBMTests: XCTestCase {
     func testPerformance() {
         let noise = PerlinNoise(grid: PerlinNoise.generateGrid(100, width: 100))
         subject.noise = {(x, y) in noise.at(x, y)}
+        subject.octaves = 10
 
         self.measureBlock() {
             for i in 0..<1000 {
