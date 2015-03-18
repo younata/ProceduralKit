@@ -19,37 +19,36 @@ class FBMTests: XCTestCase {
     }
 
     func testLacunarity() {
-        XCTAssertEqualWithAccuracy(subject.at(0,0), 0.875, 1e-6, "Lacunarity of 2")
+        XCTAssertEqualWithAccuracy(subject.at(0,0), 0.286179, 1e-6, "Lacunarity of 2")
         subject.lacunarity = 1
-        XCTAssertEqualWithAccuracy(subject.at(0,0), 3.0, 1e-6, "Lacunarity of 2")
+        XCTAssertEqualWithAccuracy(subject.at(0,0), 0.286179, 1e-6, "Lacunarity of 1")
         subject.lacunarity = 4
-        XCTAssertEqualWithAccuracy(subject.at(0,0), 0.328125, 1e-6, "Lacunarity of 2")
+        XCTAssertEqualWithAccuracy(subject.at(0,0), 0.286179, 1e-6, "Lacunarity of 4")
     }
 
     func testOctaves() {
-        XCTAssertEqualWithAccuracy(subject.at(0,0), 0.875, 1e-6, "3 Octaves")
+        XCTAssertEqualWithAccuracy(subject.at(0,0), 0.286179, 1e-6, "3 Octaves")
 
         subject.octaves = 1
-        XCTAssertEqualWithAccuracy(subject.at(0,0), 0.5, 1e-6, "1 Octave")
+        XCTAssertEqualWithAccuracy(subject.at(0,0), 0.65, 1e-6, "1 Octave")
 
         subject.octaves = 6
-        XCTAssertEqualWithAccuracy(subject.at(0,0), 0.984375, 1e-6, "6 Octaves")
+        XCTAssertEqualWithAccuracy(subject.at(0,0), 0.286179, 1e-6, "6 Octaves")
     }
 
     func testNoise() {
-        XCTAssertEqualWithAccuracy(subject.at(0,0), 0.875, 1e-6, "return 1")
+        XCTAssertEqualWithAccuracy(subject.at(0,0), 0.286179, 1e-6, "return 1")
 
-        subject.noise = {(x, y) in x*y}
-        XCTAssertEqualWithAccuracy(subject.at(2,2), 0.0014, 1e-6, "return x*y")
+        subject.noise = {(x, y) in (x*x)/(y*y)}
+        XCTAssertEqualWithAccuracy(subject.at(2,3), 0.127191, 1e-6, "return x*y")
 
         let noise = PerlinNoise(grid: [
-            [(x: 1, y: 0), (x: 0, y: 1)],
             [(x: 1, y: 0), (x: 0, y: 1)],
             [(x: 1, y: 0), (x: 0, y: 1)]
             ])
         subject.noise = {(x, y) in noise.at(x, y)}
 
-        XCTAssertEqualWithAccuracy(subject.at(2,2), -0.0286, 1e-6, "return noise")
+        XCTAssertEqualWithAccuracy(subject.at(1,1), 0.019272, 1e-6, "return noise")
     }
 
     func testPerformance() {

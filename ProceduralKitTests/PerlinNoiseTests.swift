@@ -53,13 +53,18 @@ class PerlinNoiseTests: XCTestCase {
         XCTAssertEqualWithAccuracy(subject.linearInterpolation(1, 2, weight: 0.2), 1.2, 1e-6, "Linear Interpolation between two values")
     }
 
+    func testCosineInterpolation() {
+        XCTAssertEqual(subject.cosineInterpolation(1, 2, weight: 0.5), 1.5, "Cosine Interpolation between two values")
+        XCTAssertEqualWithAccuracy(subject.cosineInterpolation(1, 2, weight: 0.2), 1.095491, 1e-6, "Cosine Interpolation between two values")
+    }
+
     func testDotProductGradient() {
         XCTAssertEqualWithAccuracy(subject.dotProductGradient(1, iy: 1, x: 1.2, y: 1.2), 0.2, 1e-6, "")
     }
 
     func testAt() {
         XCTAssertEqualWithAccuracy(subject.at(2,1), 0, 1e-6, "")
-        XCTAssertEqualWithAccuracy(subject.at(-1,-2), 6.0, 1e-6, "Below the bounds")
+        XCTAssertEqualWithAccuracy(subject.at(-1,-2), -2.0, 1e-6, "Below the bounds")
         XCTAssertEqualWithAccuracy(subject.at(4,2), 2, 1e-6, "Beyond the bounds")
     }
 

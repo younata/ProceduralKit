@@ -40,9 +40,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @IBAction func resetContent(sender: NSButton) {
-        let freqString = frequencyField.stringValue as NSString
-        let frequency = CGFloat(freqString.doubleValue != 0 ? freqString.doubleValue : 1)
-
         let lacString = lacunarityField.stringValue as NSString
         let lacunarity = CGFloat(lacString.doubleValue != 0 ? lacString.doubleValue : 2.0)
 
@@ -52,7 +49,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let gain = CGFloat(gainString.doubleValue != 0 ? gainString.doubleValue : 0.65)
 
         for fbm in [layer.red, layer.green, layer.blue] {
-            fbm.defaultFrequency = frequency
             fbm.lacunarity = lacunarity
             fbm.octaves = octaves
             fbm.gain = gain
