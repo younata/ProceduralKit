@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89A601CC1AB8C01C00EA392D /* ProceduralLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A601CB1AB8C01C00EA392D /* ProceduralLayer.swift */; };
+		89A601CD1AB8C01C00EA392D /* ProceduralLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A601CB1AB8C01C00EA392D /* ProceduralLayer.swift */; };
+		89A601D71AB8C07400EA392D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A601D61AB8C07400EA392D /* AppDelegate.swift */; };
+		89A601D91AB8C07400EA392D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89A601D81AB8C07400EA392D /* Images.xcassets */; };
+		89A601DC1AB8C07400EA392D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89A601DA1AB8C07400EA392D /* MainMenu.xib */; };
+		89A601F11AB8C1BC00EA392D /* ProceduralKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B6F9751AB135DD00618B00 /* ProceduralKit.framework */; };
 		89B6F97B1AB135DD00618B00 /* ProceduralKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 89B6F97A1AB135DD00618B00 /* ProceduralKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		89B6F9811AB135DD00618B00 /* ProceduralKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B6F9751AB135DD00618B00 /* ProceduralKit.framework */; };
 		89B6F9921AB1360D00618B00 /* FractalBrownianMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B6F9911AB1360D00618B00 /* FractalBrownianMotion.swift */; };
@@ -18,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		89A601EF1AB8C1B500EA392D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89B6F96C1AB135DD00618B00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89B6F9741AB135DD00618B00;
+			remoteInfo = ProceduralKit;
+		};
 		89B6F9821AB135DD00618B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 89B6F96C1AB135DD00618B00 /* Project object */;
@@ -28,6 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89A601CB1AB8C01C00EA392D /* ProceduralLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProceduralLayer.swift; sourceTree = "<group>"; };
+		89A601D21AB8C07400EA392D /* ProceduralKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProceduralKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		89A601D51AB8C07400EA392D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89A601D61AB8C07400EA392D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		89A601D81AB8C07400EA392D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		89A601DB1AB8C07400EA392D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		89B6F9751AB135DD00618B00 /* ProceduralKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProceduralKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B6F9791AB135DD00618B00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89B6F97A1AB135DD00618B00 /* ProceduralKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProceduralKit.h; sourceTree = "<group>"; };
@@ -40,6 +59,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		89A601CF1AB8C07400EA392D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89A601F11AB8C1BC00EA392D /* ProceduralKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		89B6F9711AB135DD00618B00 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,11 +85,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89A601D31AB8C07400EA392D /* ProceduralKitExample */ = {
+			isa = PBXGroup;
+			children = (
+				89A601D61AB8C07400EA392D /* AppDelegate.swift */,
+				89A601D81AB8C07400EA392D /* Images.xcassets */,
+				89A601DA1AB8C07400EA392D /* MainMenu.xib */,
+				89A601D41AB8C07400EA392D /* Supporting Files */,
+			);
+			path = ProceduralKitExample;
+			sourceTree = "<group>";
+		};
+		89A601D41AB8C07400EA392D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				89A601D51AB8C07400EA392D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		89B6F96B1AB135DD00618B00 = {
 			isa = PBXGroup;
 			children = (
 				89B6F9771AB135DD00618B00 /* ProceduralKit */,
 				89B6F9841AB135DD00618B00 /* ProceduralKitTests */,
+				89A601D31AB8C07400EA392D /* ProceduralKitExample */,
 				89B6F9761AB135DD00618B00 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +119,7 @@
 			children = (
 				89B6F9751AB135DD00618B00 /* ProceduralKit.framework */,
 				89B6F9801AB135DD00618B00 /* ProceduralKitTests.xctest */,
+				89A601D21AB8C07400EA392D /* ProceduralKitExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,6 +130,7 @@
 				89B6F97A1AB135DD00618B00 /* ProceduralKit.h */,
 				89B6F9911AB1360D00618B00 /* FractalBrownianMotion.swift */,
 				89B6F9931AB1362C00618B00 /* PerlinNoise.swift */,
+				89A601CB1AB8C01C00EA392D /* ProceduralLayer.swift */,
 				89B6F9781AB135DD00618B00 /* Supporting Files */,
 			);
 			path = ProceduralKit;
@@ -127,6 +176,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		89A601D11AB8C07400EA392D /* ProceduralKitExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89A601E91AB8C07400EA392D /* Build configuration list for PBXNativeTarget "ProceduralKitExample" */;
+			buildPhases = (
+				89A601CE1AB8C07400EA392D /* Sources */,
+				89A601CF1AB8C07400EA392D /* Frameworks */,
+				89A601D01AB8C07400EA392D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89A601F01AB8C1B500EA392D /* PBXTargetDependency */,
+			);
+			name = ProceduralKitExample;
+			productName = ProceduralKitExample;
+			productReference = 89A601D21AB8C07400EA392D /* ProceduralKitExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 		89B6F9741AB135DD00618B00 /* ProceduralKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89B6F98B1AB135DD00618B00 /* Build configuration list for PBXNativeTarget "ProceduralKit" */;
@@ -172,6 +239,9 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Rachel Brindle";
 				TargetAttributes = {
+					89A601D11AB8C07400EA392D = {
+						CreatedOnToolsVersion = 6.3;
+					};
 					89B6F9741AB135DD00618B00 = {
 						CreatedOnToolsVersion = 6.3;
 					};
@@ -186,6 +256,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 89B6F96B1AB135DD00618B00;
 			productRefGroup = 89B6F9761AB135DD00618B00 /* Products */;
@@ -194,11 +265,21 @@
 			targets = (
 				89B6F9741AB135DD00618B00 /* ProceduralKit */,
 				89B6F97F1AB135DD00618B00 /* ProceduralKitTests */,
+				89A601D11AB8C07400EA392D /* ProceduralKitExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		89A601D01AB8C07400EA392D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89A601D91AB8C07400EA392D /* Images.xcassets in Resources */,
+				89A601DC1AB8C07400EA392D /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		89B6F9731AB135DD00618B00 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,10 +297,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		89A601CE1AB8C07400EA392D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89A601D71AB8C07400EA392D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		89B6F9701AB135DD00618B00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89A601CC1AB8C01C00EA392D /* ProceduralLayer.swift in Sources */,
 				89B6F9941AB1362C00618B00 /* PerlinNoise.swift in Sources */,
 				89B6F9921AB1360D00618B00 /* FractalBrownianMotion.swift in Sources */,
 			);
@@ -229,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89A601CD1AB8C01C00EA392D /* ProceduralLayer.swift in Sources */,
 				89B6F9991AB13EA100618B00 /* FractalBrownianMotion.swift in Sources */,
 				89B6F99A1AB13EA100618B00 /* PerlinNoise.swift in Sources */,
 				89B6F9961AB13E7300618B00 /* FBMTests.swift in Sources */,
@@ -239,6 +330,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		89A601F01AB8C1B500EA392D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89B6F9741AB135DD00618B00 /* ProceduralKit */;
+			targetProxy = 89A601EF1AB8C1B500EA392D /* PBXContainerItemProxy */;
+		};
 		89B6F9831AB135DD00618B00 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 89B6F9741AB135DD00618B00 /* ProceduralKit */;
@@ -246,7 +342,46 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		89A601DA1AB8C07400EA392D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89A601DB1AB8C07400EA392D /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		89A601EA1AB8C07400EA392D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ProceduralKitExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		89A601EB1AB8C07400EA392D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ProceduralKitExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		89B6F9891AB135DD00618B00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -403,6 +538,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		89A601E91AB8C07400EA392D /* Build configuration list for PBXNativeTarget "ProceduralKitExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89A601EA1AB8C07400EA392D /* Debug */,
+				89A601EB1AB8C07400EA392D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		89B6F96F1AB135DD00618B00 /* Build configuration list for PBXProject "ProceduralKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
