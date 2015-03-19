@@ -24,7 +24,7 @@ public class PerlinNoise {
         for x in 0..<(length+1) {
             var g : [(x: CGFloat, y: CGFloat)] = []
             for y in 0..<(width+1) {
-                let a = CGFloat(arc4random_uniform(500000)) / 500000.0
+                let a = CGFloat(arc4random_uniform(5000000)) / 5000000.0
                 let b = sqrt(1 - a*a)
                 g.append((x: a, y: b))
             }

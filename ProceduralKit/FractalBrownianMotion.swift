@@ -12,6 +12,7 @@ public class FractalBrownianMotion {
     public var lacunarity : CGFloat = 2.0
     public var octaves : Int = 6
     public var gain : CGFloat = 0.65
+    public var initialFrequency : CGFloat = 0.01
 
     public var noise : (CGFloat, CGFloat) -> CGFloat = {(_, _) in 1}
 
@@ -19,7 +20,7 @@ public class FractalBrownianMotion {
 
     public func at(x: CGFloat, _ y: CGFloat) -> CGFloat {
         var total : CGFloat = 0.0
-        var frequency = 1.0 / CGFloat(octaves * 3)
+        var frequency = initialFrequency
         var amplitude = gain
         for i in 0..<octaves {
             let n = noise(x * frequency, y * frequency)
