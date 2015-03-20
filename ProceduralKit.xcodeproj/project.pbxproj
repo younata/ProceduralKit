@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89417DCF1ABBE458002E17D7 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89417DCE1ABBE458002E17D7 /* Math.swift */; };
+		89417DD01ABBE458002E17D7 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89417DCE1ABBE458002E17D7 /* Math.swift */; };
+		89417DD21ABBF20F002E17D7 /* Int+ProceduralKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89417DD11ABBF20F002E17D7 /* Int+ProceduralKit.swift */; };
+		89417DD31ABBF20F002E17D7 /* Int+ProceduralKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89417DD11ABBF20F002E17D7 /* Int+ProceduralKit.swift */; };
+		89417DD51ABBF644002E17D7 /* MathSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89417DD41ABBF644002E17D7 /* MathSpec.swift */; };
+		89417DD81ABBF6E1002E17D7 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89417DD61ABBF6E1002E17D7 /* Nimble.framework */; };
+		89417DD91ABBF6E1002E17D7 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89417DD71ABBF6E1002E17D7 /* Quick.framework */; };
+		89417DDB1ABBF6FC002E17D7 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 89417DD61ABBF6E1002E17D7 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		89417DDC1ABBF6FC002E17D7 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 89417DD71ABBF6E1002E17D7 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		89417DDE1ABBF77B002E17D7 /* Int+ProceduralKitSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89417DDD1ABBF77B002E17D7 /* Int+ProceduralKitSpec.swift */; };
 		89A601CC1AB8C01C00EA392D /* ProceduralLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A601CB1AB8C01C00EA392D /* ProceduralLayer.swift */; };
 		89A601CD1AB8C01C00EA392D /* ProceduralLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A601CB1AB8C01C00EA392D /* ProceduralLayer.swift */; };
 		89A601D71AB8C07400EA392D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A601D61AB8C07400EA392D /* AppDelegate.swift */; };
@@ -40,7 +50,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		89417DDA1ABBF6ED002E17D7 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				89417DDB1ABBF6FC002E17D7 /* Nimble.framework in Copy Frameworks */,
+				89417DDC1ABBF6FC002E17D7 /* Quick.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		89417DCE1ABBE458002E17D7 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		89417DD11ABBF20F002E17D7 /* Int+ProceduralKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+ProceduralKit.swift"; sourceTree = "<group>"; };
+		89417DD41ABBF644002E17D7 /* MathSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathSpec.swift; sourceTree = "<group>"; };
+		89417DD61ABBF6E1002E17D7 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = SOURCE_ROOT; };
+		89417DD71ABBF6E1002E17D7 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = SOURCE_ROOT; };
+		89417DDD1ABBF77B002E17D7 /* Int+ProceduralKitSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+ProceduralKitSpec.swift"; sourceTree = "<group>"; };
 		89A601CB1AB8C01C00EA392D /* ProceduralLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProceduralLayer.swift; sourceTree = "<group>"; };
 		89A601D21AB8C07400EA392D /* ProceduralKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProceduralKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A601D51AB8C07400EA392D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +110,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				89B6F9811AB135DD00618B00 /* ProceduralKit.framework in Frameworks */,
+				89417DD81ABBF6E1002E17D7 /* Nimble.framework in Frameworks */,
+				89417DD91ABBF6E1002E17D7 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +163,8 @@
 				89B6F97A1AB135DD00618B00 /* ProceduralKit.h */,
 				89B6F9911AB1360D00618B00 /* FractalBrownianMotion.swift */,
 				89B6F9931AB1362C00618B00 /* PerlinNoise.swift */,
+				89417DCE1ABBE458002E17D7 /* Math.swift */,
+				89417DD11ABBF20F002E17D7 /* Int+ProceduralKit.swift */,
 				89A601CB1AB8C01C00EA392D /* ProceduralLayer.swift */,
 				89B6F9781AB135DD00618B00 /* Supporting Files */,
 			);
@@ -149,7 +184,11 @@
 			children = (
 				89B6F9951AB13E7300618B00 /* FBMTests.swift */,
 				89B6F9971AB13E9800618B00 /* PerlinNoiseTests.swift */,
+				89417DD41ABBF644002E17D7 /* MathSpec.swift */,
+				89417DDD1ABBF77B002E17D7 /* Int+ProceduralKitSpec.swift */,
 				89B6F9851AB135DD00618B00 /* Supporting Files */,
+				89417DD61ABBF6E1002E17D7 /* Nimble.framework */,
+				89417DD71ABBF6E1002E17D7 /* Quick.framework */,
 			);
 			path = ProceduralKitTests;
 			sourceTree = "<group>";
@@ -183,6 +222,7 @@
 				89A601CE1AB8C07400EA392D /* Sources */,
 				89A601CF1AB8C07400EA392D /* Frameworks */,
 				89A601D01AB8C07400EA392D /* Resources */,
+				89417DDA1ABBF6ED002E17D7 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,9 +349,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89417DCF1ABBE458002E17D7 /* Math.swift in Sources */,
 				89A601CC1AB8C01C00EA392D /* ProceduralLayer.swift in Sources */,
 				89B6F9941AB1362C00618B00 /* PerlinNoise.swift in Sources */,
 				89B6F9921AB1360D00618B00 /* FractalBrownianMotion.swift in Sources */,
+				89417DD21ABBF20F002E17D7 /* Int+ProceduralKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,8 +363,12 @@
 			files = (
 				89A601CD1AB8C01C00EA392D /* ProceduralLayer.swift in Sources */,
 				89B6F9991AB13EA100618B00 /* FractalBrownianMotion.swift in Sources */,
+				89417DD31ABBF20F002E17D7 /* Int+ProceduralKit.swift in Sources */,
+				89417DDE1ABBF77B002E17D7 /* Int+ProceduralKitSpec.swift in Sources */,
 				89B6F99A1AB13EA100618B00 /* PerlinNoise.swift in Sources */,
 				89B6F9961AB13E7300618B00 /* FBMTests.swift in Sources */,
+				89417DD01ABBE458002E17D7 /* Math.swift in Sources */,
+				89417DD51ABBF644002E17D7 /* MathSpec.swift in Sources */,
 				89B6F9981AB13E9800618B00 /* PerlinNoiseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,6 +556,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -528,6 +575,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = ProceduralKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -545,6 +593,7 @@
 				89A601EB1AB8C07400EA392D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89B6F96F1AB135DD00618B00 /* Build configuration list for PBXProject "ProceduralKit" */ = {
 			isa = XCConfigurationList;

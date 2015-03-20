@@ -9,7 +9,8 @@
 import Foundation
 
 public class PerlinNoise {
-    let grid : [[(x: CGFloat, y: CGFloat)]]
+    // Grid should be an array of array of CGFloats that are between 0 and 1, inclusive.
+    let grid : [[CGFloat]]
 
     public var maxWidth : CGFloat {
         return CGFloat(grid[0].count - 1)
@@ -19,21 +20,20 @@ public class PerlinNoise {
         return CGFloat(grid.count - 1)
     }
 
-    public class func generateGrid(length: Int, width: Int) -> [[(x: CGFloat, y: CGFloat)]] {
-        var ret : [[(x: CGFloat, y: CGFloat)]] = []
+    public class func generateGrid(length: Int, width: Int) -> [[CGFloat]] {
+        var ret : [[CGFloat]] = []
         for x in 0..<(length+1) {
-            var g : [(x: CGFloat, y: CGFloat)] = []
+            var g : [CGFloat] = []
             for y in 0..<(width+1) {
                 let a = CGFloat(arc4random_uniform(5000000)) / 5000000.0
-                let b = sqrt(1 - a*a)
-                g.append((x: a, y: b))
+                g.append((a))
             }
             ret.append(g)
         }
         return ret
     }
 
-    public init(grid: [[(x: CGFloat, y: CGFloat)]]) {
+    public init(grid: [[CGFloat]]) {
         self.grid = grid
     }
 
@@ -50,7 +50,7 @@ public class PerlinNoise {
         let dx = x - CGFloat(ix)
         let dy = y - CGFloat(iy)
 
-        return (dx*grid[ix][iy].x + dy*grid[ix][iy].y)
+        return (dx*grid[ix][iy] + dy*grid[ix][iy]) / 2.0
     }
 
     public func at(x: CGFloat, _ y: CGFloat) -> CGFloat {

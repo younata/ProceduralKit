@@ -21,9 +21,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var gainField: NSTextField!
 
     let layer = ProceduralKit.ProceduralLayer()
-    let r = ProceduralKit.PerlinNoise(grid: ProceduralKit.PerlinNoise.generateGrid(100, width: 100))
-    let g = ProceduralKit.PerlinNoise(grid: ProceduralKit.PerlinNoise.generateGrid(100, width: 100))
-    let b = ProceduralKit.PerlinNoise(grid: ProceduralKit.PerlinNoise.generateGrid(100, width: 100))
+    let r = ProceduralKit.PerlinNoise(grid: ProceduralKit.PerlinNoise.generateGrid(10, width: 10))
+    let g = ProceduralKit.PerlinNoise(grid: ProceduralKit.PerlinNoise.generateGrid(10, width: 10))
+    let b = ProceduralKit.PerlinNoise(grid: ProceduralKit.PerlinNoise.generateGrid(10, width: 10))
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application

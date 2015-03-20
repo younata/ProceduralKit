@@ -13,10 +13,10 @@ class PerlinNoiseTests: XCTestCase {
 
     var subject : PerlinNoise! = nil
 
-    var grid : [[(x: CGFloat, y: CGFloat)]] = [
-        [(x: 1, y: 0), (x: 0, y: 1)],
-        [(x: 1, y: 0), (x: 0, y: 1)],
-        [(x: 1, y: 0), (x: 0, y: 1)]
+    var grid : [[CGFloat]] = [
+        [1, 0.75],
+        [0.5, 0.25],
+        [0.0, 0.0]
     ]
 
     override func setUp() {
@@ -42,8 +42,10 @@ class PerlinNoiseTests: XCTestCase {
         XCTAssertEqual(grid.count, 81, "Grid length")
         for g in grid {
             XCTAssertEqual(g.count, 101, "Grid width")
-            for pair in g {
-                XCTAssertEqualWithAccuracy(hypot(pair.x, pair.y), 1.0, 1e-6, "Must be vectors along unit circle")
+            for value in g {
+                let greaterThanOrEqualToZero = 0.0 <= value
+                let lessThanOrEqualToOne = 1.0 >= value
+                XCTAssert(greaterThanOrEqualToZero && lessThanOrEqualToOne, "Must be between 0 and 1")
             }
         }
     }
@@ -59,13 +61,16 @@ class PerlinNoiseTests: XCTestCase {
     }
 
     func testDotProductGradient() {
-        XCTAssertEqualWithAccuracy(subject.dotProductGradient(1, iy: 1, x: 1.2, y: 1.2), 0.2, 1e-6, "")
+        XCTAssertEqualWithAccuracy(subject.dotProductGradient(1, iy: 1, x: 1.2, y: 1.2), 0.05, 1e-6, "")
+
+        XCTAssertEqualWithAccuracy(subject.dotProductGradient(0, iy: 0, x: 0.4, y: 0.6), 0.5, 1e-6, "")
+        XCTAssertEqualWithAccuracy(subject.dotProductGradient(0, iy: 0, x: 0.8, y: 0.8), 0.8, 1e-6, "")
     }
 
     func testAt() {
         XCTAssertEqualWithAccuracy(subject.at(2,1), 0, 1e-6, "")
-        XCTAssertEqualWithAccuracy(subject.at(-1,-2), -2.0, 1e-6, "Below the bounds")
-        XCTAssertEqualWithAccuracy(subject.at(4,2), 2, 1e-6, "Beyond the bounds")
+        XCTAssertEqualWithAccuracy(subject.at(-1,-2), -1.0, 1e-6, "Below the bounds")
+        XCTAssertEqualWithAccuracy(subject.at(4,2), 0, 1e-6, "Beyond the bounds")
     }
 
     func testPerformance() {
@@ -73,8 +78,8 @@ class PerlinNoiseTests: XCTestCase {
         subject = PerlinNoise(grid: g)
         self.measureBlock() {
             for i in 0..<1000 {
-                var x = (CGFloat(arc4random_uniform(500000)) / 500000.0) * 99
-                var y = (CGFloat(arc4random_uniform(500000)) / 500000.0) * 99
+                var x = (CGFloat(arc4random_uniform(500000)) / 500000.0) * 100
+                var y = (CGFloat(arc4random_uniform(500000)) / 500000.0) * 100
                 self.subject.at(x, y)
             }
         }

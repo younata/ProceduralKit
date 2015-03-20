@@ -43,12 +43,12 @@ class FBMTests: XCTestCase {
         XCTAssertEqualWithAccuracy(subject.at(2,3), 0.127191, 1e-6, "return x*y")
 
         let noise = PerlinNoise(grid: [
-            [(x: 1, y: 0), (x: 0, y: 1)],
-            [(x: 1, y: 0), (x: 0, y: 1)]
+            [1, 0],
+            [1, 0]
             ])
         subject.noise = {(x, y) in noise.at(x, y)}
 
-        XCTAssertEqualWithAccuracy(subject.at(1,1), 0.019272, 1e-6, "return noise")
+        XCTAssertEqualWithAccuracy(subject.at(1,1), 0.010598, 1e-6, "return noise")
     }
 
     func testPerformance() {
