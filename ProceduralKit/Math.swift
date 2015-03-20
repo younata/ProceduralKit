@@ -7,10 +7,9 @@
 //
 
 // simple linear-congruential generator.
-// Defaults are C++11's values.
-func noise(x: Int, multiplier: Int = 48271, constant: Int = 0, modulus: Int = 0x7FFFFFFF) -> Double {
-    return 0
-//    return Double((multiplier * x + constant) % 0xFFFFFFFF) / Double(0xFFFFFFFF)
+// Defaults are gcc's values.
+func noise(x: Int, multiplier: Int = 1103515245, constant: Int = 12345, modulus: Int = 0x10000000) -> Double {
+    return Double((multiplier * x + constant) % modulus) / Double(modulus)
 }
 
 func greatestCommonDivisor(a: Int, b: Int) -> Int {

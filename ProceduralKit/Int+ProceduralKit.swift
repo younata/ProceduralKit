@@ -16,13 +16,13 @@ extension Int {
     }
 
     var primeFactors : Set<Int> {
-        var ret = Set<Int>()
+        var ret = Set<Int>([1, self])
 
         var x = self
         var i = 2
-        while i < x {
+        while i <= x {
             if x % i == 0 {
-                ret.insert(x)
+                ret.insert(i)
                 x /= i
             } else {
                 i++
@@ -33,6 +33,9 @@ extension Int {
     }
 
     var prime : Bool {
-        return primeFactors.count == 0
+        if self < 1 {
+            return false
+        }
+        return primeFactors.count == 2 // 1, itself
     }
 }

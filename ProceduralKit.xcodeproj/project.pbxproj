@@ -14,9 +14,9 @@
 		89417DD51ABBF644002E17D7 /* MathSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89417DD41ABBF644002E17D7 /* MathSpec.swift */; };
 		89417DD81ABBF6E1002E17D7 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89417DD61ABBF6E1002E17D7 /* Nimble.framework */; };
 		89417DD91ABBF6E1002E17D7 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89417DD71ABBF6E1002E17D7 /* Quick.framework */; };
-		89417DDB1ABBF6FC002E17D7 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 89417DD61ABBF6E1002E17D7 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		89417DDC1ABBF6FC002E17D7 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 89417DD71ABBF6E1002E17D7 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		89417DDE1ABBF77B002E17D7 /* Int+ProceduralKitSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89417DDD1ABBF77B002E17D7 /* Int+ProceduralKitSpec.swift */; };
+		89417DE01ABC7D81002E17D7 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 89417DD61ABBF6E1002E17D7 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		89417DE11ABC7D81002E17D7 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 89417DD71ABBF6E1002E17D7 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		89A601CC1AB8C01C00EA392D /* ProceduralLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A601CB1AB8C01C00EA392D /* ProceduralLayer.swift */; };
 		89A601CD1AB8C01C00EA392D /* ProceduralLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A601CB1AB8C01C00EA392D /* ProceduralLayer.swift */; };
 		89A601D71AB8C07400EA392D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A601D61AB8C07400EA392D /* AppDelegate.swift */; };
@@ -51,14 +51,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		89417DDA1ABBF6ED002E17D7 /* Copy Frameworks */ = {
+		89417DDF1ABC7D72002E17D7 /* Copy Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				89417DDB1ABBF6FC002E17D7 /* Nimble.framework in Copy Frameworks */,
-				89417DDC1ABBF6FC002E17D7 /* Quick.framework in Copy Frameworks */,
+				89417DE01ABC7D81002E17D7 /* Nimble.framework in Copy Frameworks */,
+				89417DE11ABC7D81002E17D7 /* Quick.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,7 +222,6 @@
 				89A601CE1AB8C07400EA392D /* Sources */,
 				89A601CF1AB8C07400EA392D /* Frameworks */,
 				89A601D01AB8C07400EA392D /* Resources */,
-				89417DDA1ABBF6ED002E17D7 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -259,6 +258,7 @@
 				89B6F97C1AB135DD00618B00 /* Sources */,
 				89B6F97D1AB135DD00618B00 /* Frameworks */,
 				89B6F97E1AB135DD00618B00 /* Resources */,
+				89417DDF1ABC7D72002E17D7 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);

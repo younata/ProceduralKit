@@ -4,6 +4,9 @@ import Nimble
 class MathSpec: QuickSpec {
     override func spec() {
         describe("noise") {
+            it("should produce repeatable noise from a given value") {
+                expect(noise(10)).to(beCloseTo(0.109192, within: 1e-6))
+            }
         }
 
         describe("greatestCommonDivisor") {
