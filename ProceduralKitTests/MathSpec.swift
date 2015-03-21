@@ -6,6 +6,12 @@ class MathSpec: QuickSpec {
         describe("noise") {
             it("should produce repeatable noise from a given value") {
                 expect(noise(10)).to(beCloseTo(0.109192, within: 1e-6))
+                expect(noise(5)).to(beCloseTo(0.554619, within: 1e-6))
+            }
+
+            it("should produce 2d repeatable noise from given values") {
+                expect(noise(10, y: 10)).to(beCloseTo(0.109192, within: 1e-6))
+                expect(noise(10, y: 5)).to(beCloseTo(0.331905, within: 1e-6))
             }
         }
 

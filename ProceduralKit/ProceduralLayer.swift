@@ -9,9 +9,9 @@
 import QuartzCore
 
 public class ProceduralLayer: CALayer {
-    public func setColorsFromPerlinNoise(r: (x: CGFloat, y: CGFloat) -> (CGFloat),
-                                         g: (x: CGFloat, y: CGFloat) -> (CGFloat),
-                                         b: (x: CGFloat, y: CGFloat) -> (CGFloat)) {
+    public func setColorsFromPerlinNoise(r: (x: Double, y: Double) -> (Double),
+                                         g: (x: Double, y: Double) -> (Double),
+                                         b: (x: Double, y: Double) -> (Double)) {
         red = r
         green = g
         blue = b
@@ -19,9 +19,9 @@ public class ProceduralLayer: CALayer {
         self.setNeedsDisplay()
     }
 
-    public var red : (x: CGFloat, y: CGFloat) -> (CGFloat) = {(_, _) in 0}
-    public var green : (x: CGFloat, y: CGFloat) -> (CGFloat) = {(_, _) in 0}
-    public var blue : (x: CGFloat, y: CGFloat) -> (CGFloat) = {(_, _) in 0}
+    public var red : (x: Double, y: Double) -> (Double) = {(_, _) in 0}
+    public var green : (x: Double, y: Double) -> (Double) = {(_, _) in 0}
+    public var blue : (x: Double, y: Double) -> (Double) = {(_, _) in 0}
 
     public var maxWidth: CGFloat = 100
     public var maxHeight: CGFloat = 100
@@ -43,12 +43,13 @@ public class ProceduralLayer: CALayer {
                 let w = CGFloat(widthIndex) * widthStep
                 let frame = CGRectMake(w, h, widthStep, heightStep)
 
-                let x = w + halfWidthStep
-                let y = h + halfHeightStep
+                let x = Double(w + halfWidthStep)
+                let y = Double(h + halfHeightStep)
 
-                let r = red(x: x, y: y)
-                let g = green(x: x, y: y)
-                let b = blue(x: x, y: y)
+                let r = CGFloat(red(x: x, y: y))
+                let g = CGFloat(green(x: x, y: y))
+                let b = CGFloat(blue(x: x, y: y))
+
                 CGContextSetFillColorWithColor(ctx, CGColorCreateGenericRGB(r, g, b, 1.0))
                 CGContextFillRect(ctx, frame)
             }

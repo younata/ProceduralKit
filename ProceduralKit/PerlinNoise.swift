@@ -9,56 +9,35 @@
 import Foundation
 
 public class PerlinNoise {
-    // Grid should be an array of array of CGFloats that are between 0 and 1, inclusive.
-    let grid : [[CGFloat]]
 
-    public var maxWidth : CGFloat {
-        return CGFloat(grid[0].count - 1)
+    let noiseFunc : (Double, Double) -> (Double)
+
+    public init(noise: (Double, Double) -> (Double)) {
+        self.noiseFunc = noise
     }
 
-    public var maxHeight : CGFloat {
-        return CGFloat(grid.count - 1)
-    }
-
-    public class func generateGrid(length: Int, width: Int) -> [[CGFloat]] {
-        var ret : [[CGFloat]] = []
-        for x in 0..<(length+1) {
-            var g : [CGFloat] = []
-            for y in 0..<(width+1) {
-                let a = CGFloat(arc4random_uniform(5000000)) / 5000000.0
-                g.append((a))
-            }
-            ret.append(g)
-        }
-        return ret
-    }
-
-    public init(grid: [[CGFloat]]) {
-        self.grid = grid
-    }
-
-    func linearInterpolation(a: CGFloat, _ b: CGFloat, weight: CGFloat) -> CGFloat {
+    func linearInterpolation(a: Double, _ b: Double, weight: Double) -> Double {
         return ((1.0 - weight) * a) + (weight * b)
     }
 
-    func cosineInterpolation(a: CGFloat, _ b: CGFloat, weight: CGFloat) -> CGFloat {
-        let x = weight * CGFloat(M_PI)
+    func cosineInterpolation(a: Double, _ b: Double, weight: Double) -> Double {
+        let x = weight * Double(M_PI)
         return  linearInterpolation(a, b, weight: (1.0 - cos(x)) / 2.0)
     }
 
-    func dotProductGradient(ix: Int, iy: Int, x: CGFloat, y: CGFloat) -> CGFloat {
-        let dx = x - CGFloat(ix)
-        let dy = y - CGFloat(iy)
+    func dotProductGradient(ix: Int, iy: Int, x: Double, y: Double) -> Double {
+        let dx = x - Double(ix)
+        let dy = y - Double(iy)
 
-        return (dx*grid[ix][iy] + dy*grid[ix][iy]) / 2.0
+        return (dx * noiseFunc(Double(ix), Double(iy)) + dy * noiseFunc(Double(ix), Double(iy))) / 2.0
     }
 
-    public func at(x: CGFloat, _ y: CGFloat) -> CGFloat {
+    public func at(x: Double, _ y: Double) -> Double {
         let (x0, x1) = nearestValidXIntegers(x)
         let (y0, y1) = nearestValidYIntegers(x0, y: y)
 
-        let weightX = x - CGFloat(x0)
-        let weightY = y - CGFloat(y0)
+        let weightX = x - Double(x0)
+        let weightY = y - Double(y0)
 
         var n0 = dotProductGradient(x0, iy: y0, x: x, y: y)
         var n1 = dotProductGradient(x1, iy: y0, x: x, y: y)
@@ -73,34 +52,11 @@ public class PerlinNoise {
         return cosineInterpolation(ix0, ix1, weight: weightY)
     }
 
-    private func nearestValidXIntegers(var x: CGFloat) -> (Int, Int) {
-        if grid.count < 2 {
-            return (0,0)
-        }
-        if x < 0.0 {
-            x = 0
-        }
-        if maxHeight <= x {
-            x = maxHeight - 1
-        }
-
+    private func nearestValidXIntegers(var x: Double) -> (Int, Int) {
         return (Int(x), Int(x+1))
     }
 
-    private func nearestValidYIntegers(x: Int, var y: CGFloat) -> (Int, Int) {
-
-        let g = grid[x]
-
-        if g.count < 2 {
-            return (0,0)
-        }
-        if y < 0.0 {
-            y = 0
-        }
-        if maxWidth <= y {
-            y = maxWidth - 1
-        }
-
+    private func nearestValidYIntegers(x: Int, var y: Double) -> (Int, Int) {
         return (Int(y), Int(y+1))
     }
 }

@@ -6,16 +6,16 @@
 //  Copyright (c) 2015 Rachel Brindle. All rights reserved.
 //
 
-extension Int {
-    func isRelativelyPrimeTo(to: Int) -> Bool {
+public extension Int {
+    public func isRelativelyPrimeTo(to: Int) -> Bool {
         return greatestCommonDivisor(self, to) == 1
     }
 
-    func isDivisibleBy(by: Int) -> Bool {
+    public func isDivisibleBy(by: Int) -> Bool {
         return (self % by) == 0
     }
 
-    var primeFactors : Set<Int> {
+    public var primeFactors : Set<Int> {
         var ret = Set<Int>([1, self])
 
         var x = self
@@ -32,7 +32,7 @@ extension Int {
         return ret
     }
 
-    var prime : Bool {
+    public var prime : Bool {
         if self < 1 {
             return false
         }

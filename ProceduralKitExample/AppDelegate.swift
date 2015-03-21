@@ -21,16 +21,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var gainField: NSTextField!
 
     let layer = ProceduralKit.ProceduralLayer()
-    let r = ProceduralKit.PerlinNoise(grid: ProceduralKit.PerlinNoise.generateGrid(10, width: 10))
-    let g = ProceduralKit.PerlinNoise(grid: ProceduralKit.PerlinNoise.generateGrid(10, width: 10))
-    let b = ProceduralKit.PerlinNoise(grid: ProceduralKit.PerlinNoise.generateGrid(10, width: 10))
+    let r = ProceduralKit.PerlinNoise() {(x, y) in noise(x, y: y)}
+    let g = ProceduralKit.PerlinNoise() {(x, y) in noise(x, y: y)}
+    let b = ProceduralKit.PerlinNoise() {(x, y) in noise(x, y: y)}
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
         view.wantsLayer = true
         layer.maxWidth = 10
         layer.maxHeight = 10
-        layer.setColorsFromPerlinNoise(r.at, g: g.at, b: b.at)
+//        layer.setColorsFromPerlinNoise(r.at, g: g.at, b: b.at)
+        layer.setColorsFromPerlinNoise({(x, y) in noise(x*10, y: y*10)}, g: {(x, y) in noise(x*10, y:y*10)}, b: {(x,y) in noise(x*10, y: y*10)})
         view.layer = layer
     }
 

@@ -42,24 +42,23 @@ class FBMTests: XCTestCase {
         subject.noise = {(x, y) in (x*x)/(y*y)}
         XCTAssertEqualWithAccuracy(subject.at(2,3), 0.127191, 1e-6, "return x*y")
 
-        let noise = PerlinNoise(grid: [
-            [1, 0],
-            [1, 0]
-            ])
-        subject.noise = {(x, y) in noise.at(x, y)}
+        let noise = PerlinNoise() {(x, y) in
+            return x == 0 ? 1.0 : 0.0
+        }
+        subject.noise = noise.at
 
         XCTAssertEqualWithAccuracy(subject.at(1,1), 0.010598, 1e-6, "return noise")
     }
 
     func testPerformance() {
-        let noise = PerlinNoise(grid: PerlinNoise.generateGrid(100, width: 100))
-        subject.noise = {(x, y) in noise.at(x, y)}
+        let perlinNoise = PerlinNoise() {(x, y) in noise(x, y: y)}
+        subject.noise = {(x, y) in perlinNoise.at(x, y)}
         subject.octaves = 10
 
         self.measureBlock() {
             for i in 0..<1000 {
-                var x = (CGFloat(arc4random_uniform(500000)) / 500000.0) * 99
-                var y = (CGFloat(arc4random_uniform(500000)) / 500000.0) * 99
+                var x = (Double(arc4random_uniform(500000)) / 500000.0) * 99
+                var y = (Double(arc4random_uniform(500000)) / 500000.0) * 99
                 self.subject.at(x, y)
             }
         }

@@ -6,20 +6,18 @@
 //  Copyright (c) 2015 Rachel Brindle. All rights reserved.
 //
 
-import Foundation
-
 public class FractalBrownianMotion {
-    public var lacunarity : CGFloat = 2.0
+    public var lacunarity : Double = 2.0
     public var octaves : Int = 6
-    public var gain : CGFloat = 0.65
-    public var initialFrequency : CGFloat = 0.01
+    public var gain : Double = 0.65
+    public var initialFrequency : Double = 0.01
 
-    public var noise : (CGFloat, CGFloat) -> CGFloat = {(_, _) in 1}
+    public var noise : (Double, Double) -> Double = {(_, _) in 1}
 
     public init() {}
 
-    public func at(x: CGFloat, _ y: CGFloat) -> CGFloat {
-        var total : CGFloat = 0.0
+    public func at(x: Double, _ y: Double) -> Double {
+        var total : Double = 0.0
         var frequency = initialFrequency
         var amplitude = gain
         for i in 0..<octaves {
@@ -28,6 +26,6 @@ public class FractalBrownianMotion {
             frequency *= lacunarity
             amplitude *= gain
         }
-        return total / CGFloat(octaves)
+        return total / Double(octaves)
     }
 }

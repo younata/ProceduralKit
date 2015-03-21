@@ -8,11 +8,16 @@
 
 // simple linear-congruential generator.
 // Defaults are gcc's values.
-func noise(x: Int, multiplier: Int = 1103515245, constant: Int = 12345, modulus: Int = 0x10000000) -> Double {
-    return Double((multiplier * x + constant) % modulus) / Double(modulus)
+public func noise(x: Double, y: Double? = nil, multiplier: Double = 1103515245, constant: Double = 12345, modulus: Double = 0x10000000) -> Double {
+    let a = (multiplier * x + constant) % modulus / modulus
+    if let w = y {
+        let b = (multiplier * w + constant) % modulus / modulus
+        return (a + b) / 2.0
+    }
+    return a
 }
 
-func greatestCommonDivisor(a: Int, b: Int) -> Int {
+public func greatestCommonDivisor(a: Int, b: Int) -> Int {
     var x = max(a, b)
     var y = min(a, b)
     while y != 0 {
